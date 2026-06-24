@@ -29,9 +29,7 @@ while True:
         if choice==5:
             print("Exited")
             break
-        elif choice not in [1, 2, 3, 4]:
-            print("Invalid choice")
-            continue
+        
         a=int(input("Enter a vlaue 'a': "))
         b=int(input("Enter a vlaue 'b': "))
 
@@ -45,6 +43,10 @@ while True:
                 print("Result: ",multiply(a,b))
             case 4:
                 print("Result: ",divide(a,b))
+            case _:
+                print("Invalid choice")
+                continue
+            
             
     
     except ValueError :
