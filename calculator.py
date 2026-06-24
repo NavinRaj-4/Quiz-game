@@ -12,6 +12,12 @@ def divide(a,b):
         raise ZeroDivisionError("Cannot divide by zero")
     return a/b
 
+def modulus(a,b):
+    if b==0:
+        raise ZeroDivisionError("Cannot divide by zero")
+    return a%b
+
+
 
 while True:
     print("\nCalculator")
@@ -19,14 +25,15 @@ while True:
     print("2. Subtract")
     print("3. Multiply")
     print("4. Divide")
-    print("5. Exit")
+    print("5.Modulus division")
+    print("6. Exit")
     
     
         
     try:
         choice=int(input("Enter your choice: "))
 
-        if choice==5:
+        if choice==6:
             print("Exited")
             break
         
@@ -43,6 +50,8 @@ while True:
                 print("Result: ",multiply(a,b))
             case 4:
                 print("Result: ",divide(a,b))
+            case 5:
+                print("Result: ",modulus(a,b))
             case _:
                 print("Invalid choice")
                 continue
